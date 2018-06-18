@@ -32,6 +32,6 @@ if __name__ == "__main__":
     dispatcher.add_error_handler(error)
 
     updater.start_webhook(listen="0.0.0.0", port=int(config.port), url_path=config.token)
-    updater.bot.setWebhook("https://https://ltrtbot.herokuapp.com/main.py".format(config.name, config.token))
+    updater.bot.setWebhook("https://{}.herokuapp.com/{}".format(config.name, config.token))
 
     updater.idle()
